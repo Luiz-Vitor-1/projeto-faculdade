@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Atividade</title>
+
+        <style>
+            body {
+                background-color: #1C1E20;
+            }
+            
+            p, h1, h2, h3, h4, h5, li {
+                font-family: 'Times New Roman', Times, serif;
+                color: #fff;
+            }
+            p {
+                font-size: 1.125rem;
+            }
+            .abrirOriginal{
+                background-color: #9B39FE;
+                color: #fff;
+                font-family: 'Times New Roman', Times, serif;
+                color: #fff;
+                text-decoration: none;
+                align-self: center;
+                text-align: center;
+                border-radius: 4px;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .listas-receitas {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                height: 100%;
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .receita {
+                flex-direction: column;
+                background-color: #24262B;
+                border-radius: 4px;
+                padding-right: 50px;
+                padding-left: 50px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .imagem-receita {
+                border-radius: 4px;
+                width: 200px;
+                height: 200px;
+            }
+            .titulo-receita{
+                font-family: sans-serif;
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #fff;
+            }
+            .branco {
+                background-color: #fff;
+            }
+            .branco p{
+                color: #000000;
+            }
+            
+        </style>
+      
+    </head>
+    <body>
+        <header>
+            <h1>Receitas grátis</h1>
+            <h4>Aqui você descobrirá as melhores receitas!</h4>
+        </header>
+        <div>
+            <div class="listas-receitas">
+                <div class="receita">
+                    <p class="titulo-receita">Brigadeiro</p>
+                    <button onclick='document.getElementsByClassName("abrirOriginal")[0].innerHTML = "Surpresa"' class="abrirOriginal">Mudar nome</button>
+                </div>
+
+                <div class="receita">
+                    <p class="titulo-receita">Brigadeiro</p>
+                    <button onclick='mudarCSS()' class="abrirOriginal">Virar column</button>
+                </div>
+
+                <div class="receita">
+                    <p class="titulo-receita">Brigadeiro</p>
+                    <button onclick='esconderElemento()' class="abrirOriginal">Esconder os elementos anteriores</button>
+                </div>
+
+                <div class="receita">
+                    <p class="titulo-receita">Brigadeiro</p>
+                    <button onclick='mudarCorCSS()' class="abrirOriginal">Mudar cor</button>
+                </div>
+                
+                <div class="receita">
+                    <p class="titulo-receita">Brigadeiro</p>
+                    <button  class="abrirOriginal" >Abrir original</button>
+                </div>
+
+                <div class="receita">
+                    <p class="titulo-receita">Brigadeiro</p>
+                    <button  class="abrirOriginal" >Abrir original</button>
+                </div>
+
+                <div class="receita">
+                    <p class="titulo-receita">Brigadeiro</p>
+                    <button  class="abrirOriginal" >Abrir original</button>
+                </div>
+
+                <div class="receita">
+                    <p class="titulo-receita">Brigadeiro</p>
+                    <button class="abrirOriginal" >Abrir original</button>
+                </div>
+        </div>
+    </body>
+
+    <script>
+        function mudarCSS(){
+            document.getElementsByClassName("listas-receitas")[0].style.flexDirection  = "column";
+        }
+        function esconderElemento(){
+            document.getElementsByClassName("receita")[0].style.display  = "none";
+            document.getElementsByClassName("receita")[1].style.display  = "none";
+        }
+
+        function mudarCorCSS(){
+
+            const items = document.querySelectorAll(".receita");
+
+            items.forEach((item) => {
+                item.classList.add("branco");
+            });
+        }
+    </script>
+</html>
